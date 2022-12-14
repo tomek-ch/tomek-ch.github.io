@@ -14,7 +14,7 @@ const activeRoute = pathname.slice(1);
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="selection:bg-yellow-300">
+<html lang="en" class="selection:bg-yellow-300 selection:text-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,11 +24,13 @@ const activeRoute = pathname.slice(1);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="dark:bg-slate-900 dark:text-slate-400 dark:selection:text-black">
+  <body
+    class="dark:bg-slate-900 dark:text-slate-500 dark:selection:text-black text-slate-400"
+  >
     <script is:inline>
       const isDarkTheme = JSON.parse(localStorage.getItem("isDarkTheme"));
 
