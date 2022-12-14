@@ -31,7 +31,7 @@ const HeaderLink = ({ children, href, isActive }: HeaderLinkProps) => {
 
 export const Header = ({ activeRoute, children }: HeaderProps) => {
   return (
-    <header className="flex py-8 justify-between md:justify-end">
+    <header className="flex py-8 justify-between sm:justify-end">
       {children}
       {[
         ["/", "Home"],
