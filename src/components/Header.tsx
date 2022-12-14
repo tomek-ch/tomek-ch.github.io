@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 type HeaderProps = {
   activeRoute: string;
+  children: ReactNode;
 };
 
 type HeaderLinkProps = {
@@ -23,9 +24,10 @@ const HeaderLink = ({ children, href, isActive }: HeaderLinkProps) => {
   );
 };
 
-export const Header = ({ activeRoute }: HeaderProps) => {
+export const Header = ({ activeRoute, children }: HeaderProps) => {
   return (
     <header className="flex py-8 justify-between md:justify-end">
+      {children}
       {[
         ["/", "Home"],
         ["/blog", "Blog"],

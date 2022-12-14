@@ -1,6 +1,7 @@
 ---
 import { Container } from "../components/Container";
 import { Header } from "../components/Header";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export interface Props {
   title: string;
@@ -29,7 +30,9 @@ const activeRoute = pathname.slice(1);
   </head>
   <body>
     <Container>
-      <Header activeRoute={activeRoute} />
+      <Header activeRoute={activeRoute}>
+        <ThemeToggle className="mr-4" />
+      </Header>
       <slot />
     </Container>
   </body>
