@@ -8,7 +8,7 @@ type HeaderProps = {
 
 export const Header = ({ activeRoute, children }: HeaderProps) => {
   return (
-    <header className="flex py-8 justify-between sm:justify-end text-black dark:text-slate-400">
+    <header className="flex py-8 justify-between sm:justify-end text-black dark:text-slate-400 -mr-4">
       {children}
       {[
         ["/", "Home"],
