@@ -1,6 +1,6 @@
 ---
 import { Author } from "../components/Author";
-import { PostTop } from "../components/PostTop";
+import { BlogPost } from "../components/BlogPost";
 import Layout from "./Layout.astro";
 
 export interface Props {
@@ -20,19 +20,9 @@ const {
   <div
     class="md:flex-row md:items-start flex flex-col justify-between gap-6 relative"
   >
-    <article
-      itemscope
-      itemtype="http://schema.org/Article"
-      class="pb-10 md:pb-20 pt-14"
-    >
-      <PostTop title={title} pubDate={pubDate} />
-      <meta itemprop="publisher" content="Tomasz Chmielnicki" />
-      <div
-        class="prose prose-slate dark:prose-invert prose-img:rounded-xl prose-pre:rounded-xl prose-h2:font-medium sm:prose-p:text-lg dark:prose-p:text-slate-400 sm:prose-headings:text-3xl"
-      >
-        <slot />
-      </div>
-    </article>
+    <BlogPost title={title} pubDate={pubDate}>
+      <slot />
+    </BlogPost>
     <div class="max-w-lg sticky top-0 pt-14">
       <Author />
     </div>
