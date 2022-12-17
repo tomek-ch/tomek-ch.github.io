@@ -15,7 +15,10 @@ const {
 ---
 
 <Layout title={title}>
-  <h1>{title}</h1>
-  <div>{pubDate}</div>
-  <slot />
+  <article itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name headline">{title}</h1>
+    <div>{pubDate}</div>
+    <meta itemprop="publisher" content="Tomasz Chmielnicki" />
+    <slot />
+  </article>
 </Layout>
