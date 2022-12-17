@@ -19,6 +19,10 @@ const {
     <h1 itemprop="name headline">{title}</h1>
     <div>{pubDate}</div>
     <meta itemprop="publisher" content="Tomasz Chmielnicki" />
-    <slot />
+    <div
+      class="prose prose-slate dark:prose-invert prose-img:rounded-xl prose-pre:rounded-xl prose-h2:font-semibold"
+    >
+      <slot />
+    </div>
   </article>
 </Layout>
