@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<Layout title="Title">
+  <h1>Blog</h1>
+  <ul>
+    {
+      posts.map(({ frontmatter: { title, description, pubDate }, url }) => (
+        <li>
+          <a href={url}>
+            <h2>{title}</h2>
+            <div>{pubDate}</div>
+            <div>{description}</div>
+            <br />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
