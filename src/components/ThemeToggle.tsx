@@ -36,7 +36,7 @@ export const ThemeToggle = () => {
       className="
       bg-slate-100 rounded-md w-10 h-10 grid place-content-center
       hover:bg-slate-200 transition-all active:scale-95 mr-auto sm:mr-4 flex-shrink-0
-      dark:bg-slate-800 dark:hover:text-slate-300 dark:hover:bg-slate-700
+      dark:bg-slate-800 dark:hover:text-white dark:hover:bg-slate-700
       "
     >
       {isDarkTheme ? <Sun width="18" /> : <Moon width="18" />}
