@@ -12,7 +12,7 @@ const variants = {
       isActive
         ? `text-blue-600 dark:text-blue-500
         dark:hover:text-blue-500 font-medium`
-        : "dark:hover:text-slate-300"
+        : "dark:hover:text-white"
     }`,
 };
 
