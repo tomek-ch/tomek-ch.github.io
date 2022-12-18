@@ -1,5 +1,6 @@
 import type { Post } from "../utils/types";
 import { BlogCard } from "./BlogCard";
+import { Link } from "./Link";
 
 type MorePostsProps = {
   posts: Post[];
@@ -12,6 +13,9 @@ export const MorePosts = ({ posts }: MorePostsProps) => {
       {posts.map(({ url, frontmatter: { pubDate, title } }) => (
         <BlogCard key={url} {...{ pubDate, title, url }} />
       ))}
+      <Link variant="secondary" className="w-fit ml-auto" href="/blog">
+        See all
+      </Link>
     </div>
   );
 };
