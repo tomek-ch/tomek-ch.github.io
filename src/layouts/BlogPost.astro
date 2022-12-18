@@ -20,7 +20,7 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
   .slice(0, 2);
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description}>
   <div
     class="md:flex-row md:items-start flex flex-col justify-between gap-6 relative"
   >
