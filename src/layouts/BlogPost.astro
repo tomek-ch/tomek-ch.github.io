@@ -24,7 +24,7 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
 
 <Layout title={title} description={description}>
   <div
-    class="lg:flex-row lg:items-start flex flex-col justify-between gap-6 relative"
+    class="lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative"
   >
     <div>
       <BlogPost title={title} pubDate={pubDate}>
