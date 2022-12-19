@@ -1,10 +1,10 @@
 type BlogCardProps = {
   title: string;
-  pubDate: string;
+  readTime: string;
   url: string;
 };
 
-export const BlogCard = ({ pubDate, title, url }: BlogCardProps) => {
+export const BlogCard = ({ readTime, title, url }: BlogCardProps) => {
   return (
     <a
       href={url}
@@ -12,7 +12,7 @@ export const BlogCard = ({ pubDate, title, url }: BlogCardProps) => {
       dark:bg-slate-800 dark:hover:bg-slate-700 transition-all"
     >
       <h3 className="text-black dark:text-white mb-3 font-medium">{title}</h3>
-      <div>{pubDate}</div>
+      <div className="text-sm">{readTime}</div>
     </a>
   );
 };
