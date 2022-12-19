@@ -14,7 +14,7 @@ export const PostTop = ({ title, pubDate, minutesRead }: PostTopProps) => {
         {title}
       </h1>
       <div className="my-8 text-sm sm:text-base">
-        {pubDate} · {minutesRead}
+        {pubDate} <span className="px-2">·</span> {minutesRead}
       </div>
     </div>
   );
