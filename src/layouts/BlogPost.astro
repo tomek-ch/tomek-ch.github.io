@@ -1,11 +1,10 @@
 ---
-import { Author } from "../components/Author";
 import { BlogPost } from "../components/BlogPost";
 import { EditPost } from "../components/EditPost";
 import { MorePosts } from "../components/MorePosts";
 import { sortPosts } from "../utils/sortPosts";
 import type { PostMeta } from "../utils/types";
-import Layout from "./Layout.astro";
+import BlogLayout from "./BlogLayout.astro";
 
 export type Props = {
   url: string;
@@ -22,21 +21,14 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
   .slice(0, 2);
 ---
 
-<Layout title={title} description={description}>
-  <div
-    class="lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative"
-  >
-    <div>
-      <BlogPost title={title} pubDate={pubDate} minutesRead={minutesRead}>
-        <slot />
-      </BlogPost>
-      <div class="lg:pb-14 pt-14 -ml-4">
-        <EditPost path={url} />
-      </div>
-    </div>
-    <div class="max-w-[300px] sticky top-0 pt-14 pb-14 lg:pb-0">
-      <Author />
-      <MorePosts posts={latestPosts} />
+<BlogLayout title={title} description={description}>
+  <div slot="default">
+    <BlogPost title={title} pubDate={pubDate} minutesRead={minutesRead}>
+      <slot />
+    </BlogPost>
+    <div class="lg:pb-14 pt-14 -ml-4">
+      <EditPost path={url} />
     </div>
   </div>
-</Layout>
+  <MorePosts posts={latestPosts} slot="aside" />
+</BlogLayout>
