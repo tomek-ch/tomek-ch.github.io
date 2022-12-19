@@ -13,7 +13,7 @@ export type Props = {
 };
 
 const {
-  content: { url, title, description, pubDate },
+  content: { url, title, description, pubDate, minutesRead },
 } = Astro.props;
 
 const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
@@ -27,7 +27,7 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
     class="lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative"
   >
     <div>
-      <BlogPost title={title} pubDate={pubDate}>
+      <BlogPost title={title} pubDate={pubDate} minutesRead={minutesRead}>
         <slot />
       </BlogPost>
       <div class="lg:pb-14 pt-14 -ml-4">

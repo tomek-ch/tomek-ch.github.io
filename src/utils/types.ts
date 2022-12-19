@@ -3,6 +3,7 @@ export type PostMeta = {
   description: string;
   pubDate: string;
   url: string;
+  minutesRead: string;
 };
 
 export type Post = {

@@ -1,9 +1,10 @@
 type PostTopProps = {
   title: string;
   pubDate: string;
+  minutesRead: string;
 };
 
-export const PostTop = ({ title, pubDate }: PostTopProps) => {
+export const PostTop = ({ title, pubDate, minutesRead }: PostTopProps) => {
   return (
     <div className="max-w-[650px]">
       <h1
@@ -12,7 +13,9 @@ export const PostTop = ({ title, pubDate }: PostTopProps) => {
       >
         {title}
       </h1>
-      <div className="my-8 text-sm sm:text-base">{pubDate}</div>
+      <div className="my-8 text-sm sm:text-base">
+        {pubDate} · {minutesRead}
+      </div>
     </div>
   );
 };

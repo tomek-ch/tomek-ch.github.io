@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -11,4 +12,8 @@ export default defineConfig({
   site: "https://tomek-ch.github.io",
   base: "/",
   integrations: [react(), tailwind()],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+    extendDefaultPlugins: true,
+  },
 });
