@@ -58,7 +58,3 @@ Using pure functions also makes our code easy to test. All we need to verify is 
 As you can see, by applying the principles of problem solving, we can not only make software development easier but also write more maintainable, less error prone programs.
 
 We first analyze the given problem, starting from the top, outlining the general API, then we implement the it by writing small, independent functions. This allows us to create a coherent system instead of trying to figure out how to write a program from the ground up. By doing this, we can also avoid writing code that solves the wrong problems early on.
-
-```
-
-```
