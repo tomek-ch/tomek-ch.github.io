@@ -6,7 +6,7 @@ type LinkProps = { variant?: keyof typeof variants } & ({
 
 const variants = {
   secondary: () => `border border-slate-300 hover:border-slate-400 text-black
-    dark:text-white dark:border-slate-600 dark:hover:border-slate-500`,
+    dark:text-white dark:border-slate-700 dark:hover:border-slate-600`,
   ghost: (isActive: boolean) => `hover:bg-slate-100 dark:hover:bg-slate-800
     ${
       isActive
