@@ -1,7 +1,7 @@
 ---
 import { Container } from "../components/Container";
 import { Header } from "../components/Header";
-import { ThemeToggle } from "../components/ThemeToggle";
+import ThemeToggle from "../components/ThemeToggle.astro";
 
 export interface Props {
   title: string;
@@ -48,7 +48,7 @@ const [activeRoute] = pathname.slice(1).split("/");
     </script>
     <Container>
       <Header activeRoute={activeRoute}>
-        <ThemeToggle client:load />
+        <ThemeToggle />
       </Header>
       <slot />
     </Container>

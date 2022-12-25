@@ -1,0 +1,29 @@
+---
+import { Moon } from "./icons/Moon";
+import { Sun } from "./icons/Sun";
+---
+
+<button
+  id="theme-toggle"
+  class="bg-slate-100 rounded-md grid place-content-center hover:bg-slate-200 transition-all active:scale-95 mr-auto sm:mr-4 flex-shrink-0 dark:bg-slate-800 dark:hover:text-white dark:hover:bg-slate-700 w-10 h-10"
+>
+  <Sun width="18" className="hidden dark:block" />
+  <Moon width="18" className="dark:hidden" />
+</button>
+<script is:inline>
+  if (typeof window !== "undefined") {
+    document.getElementById("theme-toggle")?.addEventListener("click", () => {
+      const isDarkTheme = [...document.documentElement.classList].includes(
+        "dark"
+      );
+
+      if (isDarkTheme) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("isDarkTheme", "false");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("isDarkTheme", "true");
+      }
+    });
+  }
+</script>
