@@ -15,7 +15,7 @@ export const Hero = () => {
         I'm passionate about creating great software - anything from intuitive
         user interfaces and useful APIs to neat utilities that get things done.
       </p>
-      <div className="-mx-4 flex gap-9 sm:gap-14 sm:text-xl text-black dark:text-white">
+      <div className="-mx-4 flex gap-4 sm:gap-14 sm:text-xl text-black dark:text-white">
         <Link
           className="dark:hover:!text-white"
           href="mailto:chmielnicki18@gmail.com"
