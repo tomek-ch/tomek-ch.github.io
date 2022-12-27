@@ -1,24 +1,27 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { MainHeading } from "../components/MainHeading";
+import BlogLayout from "../layouts/BlogLayout.astro";
 import { sortPosts } from "../utils/sortPosts";
 
 const posts = sortPosts(await Astro.glob("./blog/*.{md,mdx}"));
 ---
 
-<Layout title="Blog" description="My thoughts on software development">
-  <h1>Blog</h1>
-  <ul>
-    {
-      posts.map(({ frontmatter: { title, description, pubDate }, url }) => (
-        <li>
-          <a href={url}>
-            <h2>{title}</h2>
-            <div>{pubDate}</div>
-            <div>{description}</div>
-            <br />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</Layout>
+<BlogLayout title="Blog" description="My thoughts on software development">
+  <div>
+    <MainHeading className="mb-8">Blog</MainHeading>
+    <ul>
+      {
+        posts.map(({ frontmatter: { title, description, pubDate }, url }) => (
+          <li>
+            <a href={url}>
+              <h2>{title}</h2>
+              <div>{pubDate}</div>
+              <div>{description}</div>
+              <br />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BlogLayout>
