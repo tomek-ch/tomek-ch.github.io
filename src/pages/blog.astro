@@ -1,5 +1,6 @@
 ---
 import { MainHeading } from "../components/MainHeading";
+import { PostExcerpt } from "../components/PostExcerpt";
 import BlogLayout from "../layouts/BlogLayout.astro";
 import { sortPosts } from "../utils/sortPosts";
 
@@ -8,20 +9,13 @@ const posts = sortPosts(await Astro.glob("./blog/*.{md,mdx}"));
 
 <BlogLayout title="Blog" description="My thoughts on software development">
   <div>
-    <MainHeading className="mb-8">Blog</MainHeading>
-    <ul>
+    <MainHeading className="mb-10 sm:mb-12">Blog</MainHeading>
+    <div class="flex flex-col gap-10">
       {
-        posts.map(({ frontmatter: { title, description, pubDate }, url }) => (
-          <li>
-            <a href={url}>
-              <h2>{title}</h2>
-              <div>{pubDate}</div>
-              <div>{description}</div>
-              <br />
-            </a>
-          </li>
+        posts.map(({ frontmatter, url }) => (
+          <PostExcerpt url={url} post={frontmatter} />
         ))
       }
-    </ul>
+    </div>
   </div>
 </BlogLayout>

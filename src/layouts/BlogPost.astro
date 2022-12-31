@@ -7,8 +7,7 @@ import type { PostMeta } from "../utils/types";
 import BlogLayout from "./BlogLayout.astro";
 
 export type Props = {
-  url: string;
-  content: PostMeta;
+  content: PostMeta & { url: string };
 };
 
 const {
