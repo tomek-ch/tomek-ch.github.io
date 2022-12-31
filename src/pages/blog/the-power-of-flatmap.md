@@ -3,6 +3,8 @@ layout: "../../layouts/BlogPost.astro"
 title: "The power of flatMap"
 description: "Have you ever used it?"
 pubDate: "Dec 16 2022"
+tags:
+  - "JavaScript"
 ---
 
 You're probably familiar with higher order array functions such as `map` and `filter`. But have you heard about `flatMap`?

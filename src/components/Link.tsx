@@ -1,6 +1,9 @@
 import type { HTMLProps } from "react";
 
-type LinkProps = { variant?: keyof typeof variants } & ({
+type LinkProps = {
+  variant?: keyof typeof variants;
+  linkSize?: keyof typeof sizes;
+} & ({
   isActive?: boolean;
 } & HTMLProps<HTMLAnchorElement>);
 
@@ -14,19 +17,27 @@ const variants = {
         dark:hover:text-blue-500 font-medium`
         : "dark:hover:text-white"
     }`,
+  tag: () =>
+    "bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700",
+};
+
+const sizes = {
+  sm: "px-3 py-1 rounded-md text-sm",
+  md: "px-4 py-2 rounded-md",
 };
 
 export const Link = ({
   isActive = false,
   variant = "ghost",
+  linkSize = "md",
   ...props
 }: LinkProps) => {
   return (
     <a
       {...props}
-      className={`px-4 py-2 rounded-md transition-all active:scale-95 ${
+      className={`transition-all active:scale-95 ${
         props.className || ""
-      } ${variants[variant](isActive)}
+      } ${variants[variant](isActive)} ${sizes[linkSize]}
       `}
     >
       {props.children}

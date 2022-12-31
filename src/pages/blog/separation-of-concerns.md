@@ -3,6 +3,10 @@ layout: "../../layouts/BlogPost.astro"
 title: "Separation of Concerns Is Not What You Think It Is"
 description: "Why do we keep doing this?"
 pubDate: "Dec 16 2022"
+tags:
+  - "Frontend"
+  - "CSS"
+  - "React"
 ---
 
 When talking about separation of concerns in regards to front-end web development, people often think of separating CSS from HTML. But does this approach separate anything at all?

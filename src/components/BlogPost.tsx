@@ -7,6 +7,7 @@ type BlogPostProps = {
   title: string;
   pubDate: string;
   minutesRead: number;
+  tags: string[];
 };
 
 export const BlogPost = ({
@@ -14,10 +15,16 @@ export const BlogPost = ({
   title,
   pubDate,
   minutesRead,
+  tags,
 }: BlogPostProps) => {
   return (
     <article itemScope itemType="http://schema.org/Article">
-      <PostTop title={title} pubDate={pubDate} minutesRead={minutesRead} />
+      <PostTop
+        title={title}
+        pubDate={pubDate}
+        minutesRead={minutesRead}
+        tags={tags}
+      />
       <meta itemProp="publisher" content="Tomasz Chmielnicki" />
       <PostContent>{children}</PostContent>
     </article>

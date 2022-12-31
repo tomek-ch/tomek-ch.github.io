@@ -11,8 +11,10 @@ export type Props = {
 };
 
 const {
-  content: { url, title, description, pubDate, minutesRead },
+  content: { url, title, description, pubDate, minutesRead, tags },
 } = Astro.props;
+
+console.log(tags);
 
 const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
   .slice(0, 3)
@@ -22,7 +24,12 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
 
 <BlogLayout title={title} description={description}>
   <div slot="default">
-    <BlogPost title={title} pubDate={pubDate} minutesRead={minutesRead}>
+    <BlogPost
+      title={title}
+      pubDate={pubDate}
+      minutesRead={minutesRead}
+      tags={tags}
+    >
       <slot />
     </BlogPost>
     <div class="lg:pb-14 pt-14 -ml-4">

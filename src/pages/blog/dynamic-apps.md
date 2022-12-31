@@ -3,6 +3,10 @@ layout: "../../layouts/BlogPost.astro"
 title: "Making apps dynamic vs making dynamic apps"
 description: "How JS frameworks reverse the flow of rendering in our apps"
 pubDate: "Dec 16 2022"
+tags:
+  - "Frontend"
+  - "JavaScript"
+  - "React"
 ---
 
 ## Dynamic Functionality with Vanilla JS
