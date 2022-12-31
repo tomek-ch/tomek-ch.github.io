@@ -3,7 +3,7 @@ import { MainHeading } from "./MainHeading";
 type PostTopProps = {
   title: string;
   pubDate: string;
-  minutesRead: string;
+  minutesRead: number;
 };
 
 export const PostTop = ({ title, pubDate, minutesRead }: PostTopProps) => {

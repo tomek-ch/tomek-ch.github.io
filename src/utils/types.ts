@@ -2,8 +2,7 @@ export type PostMeta = {
   title: string;
   description: string;
   pubDate: string;
-  url: string;
-  minutesRead: string;
+  minutesRead: number;
 };
 
 export type Post = {

@@ -6,7 +6,7 @@ type BlogPostProps = {
   children: ReactNode;
   title: string;
   pubDate: string;
-  minutesRead: string;
+  minutesRead: number;
 };
 
 export const BlogPost = ({
