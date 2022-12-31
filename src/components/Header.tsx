@@ -13,7 +13,7 @@ export const Header = ({ activeRoute, children }: HeaderProps) => {
       {[
         ["/", "Home"],
         ["/blog", "Blog"],
-        ["/projects", "Projects"],
+        ["/about", "About"],
       ].map(([path, name]) => (
         <Link key={path} href={path} isActive={path.slice(1) === activeRoute}>
           {name}
