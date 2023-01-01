@@ -1,0 +1,36 @@
+---
+import BlogListLayout from "../../../layouts/BlogListLayout.astro";
+import { toKebabCase } from "../../../utils/toKebabCase";
+import type { Post } from "../../../utils/types";
+
+const { tag } = Astro.params;
+
+const postsFromTag = (await Astro.glob<Post>("../*.{md,mdx}")).filter(
+  ({ frontmatter: { tags } }) =>
+    tags.some((postTag) => toKebabCase(postTag) === tag)
+);
+
+const tagFormatted = postsFromTag[0].frontmatter.tags.find(
+  (postTag) => toKebabCase(postTag) === tag
+);
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob<Post>("../*.{md,mdx}");
+
+  const tags = allPosts.reduce(
+    (acc, { frontmatter: { tags } }) => [
+      ...acc,
+      ...tags.map(toKebabCase).filter((tag) => !acc.includes(tag)),
+    ],
+    [] as string[]
+  );
+
+  return tags.map((tag) => ({ params: { tag: toKebabCase(tag) } }));
+}
+---
+
+<BlogListLayout
+  title={`Posts tagged ${tagFormatted}`}
+  description={`Posts tagged ${tagFormatted}`}
+  posts={postsFromTag}
+/>

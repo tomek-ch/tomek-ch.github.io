@@ -1,3 +1,4 @@
+import { toKebabCase } from "../utils/toKebabCase";
 import { Link } from "./Link";
 
 type TagsProps = {
@@ -13,7 +14,7 @@ export const Tags = ({ tags, className = "" }: TagsProps) => {
           key={tag}
           variant="tag"
           linkSize="sm"
-          href={`/blog/tagged/${tag}`}
+          href={`/blog/tagged/${toKebabCase(tag)}`}
         >
           {tag}
         </Link>

@@ -1,0 +1,31 @@
+---
+import { MainHeading } from "../components/MainHeading";
+import { PostExcerpt } from "../components/PostExcerpt";
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { sortPosts } from "../utils/sortPosts";
+import type { Post } from "../utils/types";
+
+export interface Props {
+  posts: Post[];
+  title: string;
+  description: string;
+}
+
+const { posts, title, description } = Astro.props;
+sortPosts(posts);
+---
+
+<BlogLayout title={title} description={description}>
+  <div>
+    <MainHeading className="mb-10 sm:mb-12">
+      {title}
+    </MainHeading>
+    <div class="flex flex-col gap-10">
+      {
+        posts.map(({ frontmatter, url }) => (
+          <PostExcerpt url={url} post={frontmatter} />
+        ))
+      }
+    </div>
+  </div>
+</BlogLayout>

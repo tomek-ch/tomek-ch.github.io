@@ -14,8 +14,6 @@ const {
   content: { url, title, description, pubDate, minutesRead, tags },
 } = Astro.props;
 
-console.log(tags);
-
 const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
   .slice(0, 3)
   .filter(({ url }) => url !== Astro.props.url)
