@@ -5,7 +5,7 @@ import { Link } from "./Link";
 
 export const AboutLinks = () => {
   const linkStyles =
-    "text-black dark:text-white hover:text-blue-600 sm:text-lg";
+    "text-black dark:text-white hover:text-blue-600 dark:hover:!text-blue-500 sm:text-lg";
   return (
     <div className="mt-10 flex justify-between sm:justify-start sm:gap-14 -ml-4">
       <Link
