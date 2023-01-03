@@ -1,8 +1,9 @@
-import type { HTMLProps } from "react";
+import type { HTMLProps, ReactNode } from "react";
 
 type LinkProps = {
   variant?: keyof typeof variants;
   linkSize?: keyof typeof sizes;
+  icon?: ReactNode;
 } & ({
   isActive?: boolean;
 } & HTMLProps<HTMLAnchorElement>);
@@ -19,6 +20,7 @@ const variants = {
     }`,
   tag: () =>
     "bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700",
+  primary: () => "bg-blue-600 hover:bg-blue-700 text-white",
 };
 
 const sizes = {
@@ -30,16 +32,20 @@ export const Link = ({
   isActive = false,
   variant = "ghost",
   linkSize = "md",
+  icon,
   ...props
 }: LinkProps) => {
+  console.log(icon);
   return (
     <a
       {...props}
       className={`transition-all active:scale-95 ${
         props.className || ""
-      } ${variants[variant](isActive)} ${sizes[linkSize]}
-      `}
+      } ${variants[variant](isActive)} ${sizes[linkSize]} ${
+        icon ? "flex gap-2 items-center w-fit text-red!" : ""
+      }`}
     >
+      {icon}
       {props.children}
     </a>
   );
