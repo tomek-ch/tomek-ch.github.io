@@ -1,0 +1,21 @@
+---
+import { MainHeading } from "../components/MainHeading";
+import { PostContent } from "../components/PostContent";
+import AsideLayout from "./AsideLayout.astro";
+---
+
+<AsideLayout title="About" description="I'm a web developer who builds things.">
+  <div>
+    <MainHeading className="mb-8 pt-4 lg:pt-14">Hello, World!</MainHeading>
+    <PostContent>
+      <slot />
+    </PostContent>
+  </div>
+  <img
+    slot="aside"
+    src="/me.jpeg"
+    width="276"
+    height="276"
+    class="rounded-lg -mt-10 lg:mt-0"
+  />
+</AsideLayout>
