@@ -35,7 +35,6 @@ export const Link = ({
   icon,
   ...props
 }: LinkProps) => {
-  console.log(icon);
   return (
     <a
       {...props}
