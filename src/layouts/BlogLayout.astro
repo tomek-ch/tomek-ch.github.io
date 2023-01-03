@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
     class="lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative"
   >
     <slot />
-    <div class="max-w-[276px] w-full sticky top-0 pt-14 pb-14 lg:pb-0">
+    <div class="lg:max-w-[276px] w-full sticky top-0 pt-14 pb-14 lg:pb-0">
       <Author />
       <slot name="aside" />
     </div>
