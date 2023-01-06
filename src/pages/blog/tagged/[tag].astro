@@ -1,18 +1,20 @@
 ---
 import { BackToBlog } from "../../../components/BackToBlog";
 import BlogListLayout from "../../../layouts/BlogListLayout.astro";
+import { formatTag } from "../../../utils/formatTag";
+import { getFormattedTags } from "../../../utils/getFormattedTags";
 import { getTaggedPosts } from "../../../utils/getTaggedPosts";
 import { getTags } from "../../../utils/getTags";
+import { sortPosts } from "../../../utils/sortPosts";
 import { toKebabCase } from "../../../utils/toKebabCase";
 import type { Post } from "../../../utils/types";
 
 const tag = Astro.params.tag as string;
-const allPosts = await Astro.glob<Post>("../*.{md,mdx}");
+const allPosts = sortPosts(await Astro.glob<Post>("../*.{md,mdx}"));
 
 const postsFromTag = getTaggedPosts(tag, allPosts);
-const tagFormatted = postsFromTag[0].frontmatter.tags.find(
-  (postTag) => toKebabCase(postTag) === tag
-);
+const tagFormatted = formatTag(tag, allPosts);
+const allTagsFormatted = getFormattedTags(allPosts);
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob<Post>("../*.{md,mdx}");
@@ -25,6 +27,8 @@ export async function getStaticPaths() {
   title={`Posts tagged ${tagFormatted}`}
   description={`Posts tagged ${tagFormatted}`}
   posts={postsFromTag}
+  tags={allTagsFormatted}
+  activeTag={tag}
 >
   <div class="-ml-4 mb-2 sm:mb-4" slot="top">
     <BackToBlog />

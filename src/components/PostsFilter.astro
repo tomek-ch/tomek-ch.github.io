@@ -1,0 +1,18 @@
+---
+import { SearchInput } from "./SearchInput";
+import { Tags } from "./Tags";
+
+export interface Props {
+  tags: string[];
+  activeTag?: string;
+  className?: string;
+}
+
+const { tags, activeTag, className = "" } = Astro.props;
+---
+
+<div slot="aside" class={className}>
+  <SearchInput client:load />
+  <h3 class="text-black dark:text-slate-200 mb-4">Tags</h3>
+  <Tags tags={tags} activeTag={activeTag} />
+</div>

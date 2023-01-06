@@ -1,8 +1,7 @@
 ---
-import { Author } from "../components/Author";
-import { MainHeading } from "../components/MainHeading";
-import { PostExcerpt } from "../components/PostExcerpt";
-import { sortPosts } from "../utils/sortPosts";
+import { BlogHeading } from "../components/BlogHeading";
+import { PostList } from "../components/PostList";
+import PostsFilter from "../components/PostsFilter.astro";
 import type { Post } from "../utils/types";
 import AsideLayout from "./AsideLayout.astro";
 
@@ -10,25 +9,22 @@ export interface Props {
   posts: Post[];
   title: string;
   description: string;
+  tags: string[];
+  activeTag?: string;
 }
 
-const { posts, title, description } = Astro.props;
-sortPosts(posts);
+const { posts, title, description, tags, activeTag } = Astro.props;
 ---
 
-<AsideLayout title={title} description={description}>
-  <div>
-    <slot name="top" />
-    <MainHeading className="mb-10 sm:mb-14">
-      {title}
-    </MainHeading>
-    <div class="flex flex-col gap-12 sm:gap-14">
-      {
-        posts.map(({ frontmatter, url }) => (
-          <PostExcerpt url={url} post={frontmatter} />
-        ))
-      }
-    </div>
-  </div>
-  <Author slot="aside" />
+<AsideLayout
+  title={title}
+  description={description}
+  className="flex-col-reverse"
+  asideClass="!hidden lg:!block"
+>
+  <slot name="top" />
+  <BlogHeading defaultText={title} client:load />
+  <PostsFilter tags={tags} activeTag={activeTag} className="lg:hidden mb-10" />
+  <PostList className="pb-10" client:load posts={posts} />
+  <PostsFilter tags={tags} activeTag={activeTag} slot="aside" />
 </AsideLayout>

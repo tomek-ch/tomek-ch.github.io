@@ -4,20 +4,22 @@ import Layout from "./Layout.astro";
 export type Props = {
   title: string;
   description: string;
+  className?: string;
+  asideClass?: string;
 };
 
-const { title, description } = Astro.props;
+const { title, description, className = "", asideClass = "" } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
   <div
-    class="lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative"
+    class={`lg:flex-row lg:items-start flex flex-col justify-between gap-8 relative ${className}`}
   >
     <main>
       <slot />
     </main>
     <aside
-      class="lg:max-w-[260px] w-full sticky top-0 pt-10 lg:pt-14 pb-14 lg:pb-0"
+      class={`lg:max-w-[260px] w-full sticky top-0 pt-10 lg:pt-14 pb-14 lg:pb-0 ${asideClass}`}
     >
       <slot name="aside" />
     </aside>
