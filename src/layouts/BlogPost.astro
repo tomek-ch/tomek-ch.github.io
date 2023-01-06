@@ -1,10 +1,11 @@
 ---
+import { Author } from "../components/Author";
 import { BlogPost } from "../components/BlogPost";
 import { EditPost } from "../components/EditPost";
 import { MorePosts } from "../components/MorePosts";
 import { sortPosts } from "../utils/sortPosts";
 import type { PostMeta } from "../utils/types";
-import BlogLayout from "./BlogLayout.astro";
+import AsideLayout from "./AsideLayout.astro";
 
 export type Props = {
   content: PostMeta & { url: string };
@@ -20,7 +21,7 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
   .slice(0, 2);
 ---
 
-<BlogLayout title={title} description={description}>
+<AsideLayout title={title} description={description}>
   <div slot="default">
     <BlogPost
       title={title}
@@ -34,5 +35,6 @@ const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
       <EditPost path={url} />
     </div>
   </div>
+  <Author slot="aside" />
   <MorePosts posts={latestPosts} slot="aside" />
-</BlogLayout>
+</AsideLayout>

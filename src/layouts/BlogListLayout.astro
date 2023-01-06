@@ -1,9 +1,10 @@
 ---
+import { Author } from "../components/Author";
 import { MainHeading } from "../components/MainHeading";
 import { PostExcerpt } from "../components/PostExcerpt";
-import BlogLayout from "../layouts/BlogLayout.astro";
 import { sortPosts } from "../utils/sortPosts";
 import type { Post } from "../utils/types";
+import AsideLayout from "./AsideLayout.astro";
 
 export interface Props {
   posts: Post[];
@@ -15,7 +16,7 @@ const { posts, title, description } = Astro.props;
 sortPosts(posts);
 ---
 
-<BlogLayout title={title} description={description}>
+<AsideLayout title={title} description={description}>
   <div>
     <slot name="top" />
     <MainHeading className="mb-10 sm:mb-14">
@@ -29,4 +30,5 @@ sortPosts(posts);
       }
     </div>
   </div>
-</BlogLayout>
+  <Author slot="aside" />
+</AsideLayout>
