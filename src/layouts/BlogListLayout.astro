@@ -17,6 +17,7 @@ sortPosts(posts);
 
 <BlogLayout title={title} description={description}>
   <div>
+    <slot name="top" />
     <MainHeading className="mb-10 sm:mb-14">
       {title}
     </MainHeading>

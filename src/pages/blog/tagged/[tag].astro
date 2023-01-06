@@ -1,4 +1,5 @@
 ---
+import { BackToBlog } from "../../../components/BackToBlog";
 import BlogListLayout from "../../../layouts/BlogListLayout.astro";
 import { toKebabCase } from "../../../utils/toKebabCase";
 import type { Post } from "../../../utils/types";
@@ -33,4 +34,8 @@ export async function getStaticPaths() {
   title={`Posts tagged ${tagFormatted}`}
   description={`Posts tagged ${tagFormatted}`}
   posts={postsFromTag}
-/>
+>
+  <div class="-ml-4 mb-2 sm:mb-4" slot="top">
+    <BackToBlog />
+  </div>
+</BlogListLayout>
