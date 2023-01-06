@@ -16,7 +16,9 @@ const { title, description } = Astro.props;
     <main>
       <slot />
     </main>
-    <aside class="lg:max-w-[260px] w-full sticky top-0 pt-14 pb-14 lg:pb-0">
+    <aside
+      class="lg:max-w-[260px] w-full sticky top-0 pt-10 lg:pt-14 pb-14 lg:pb-0"
+    >
       <slot name="aside" />
     </aside>
   </div>
