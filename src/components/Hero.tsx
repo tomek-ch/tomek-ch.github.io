@@ -32,9 +32,9 @@ export const Hero = () => {
         <Link
           className="dark:hover:!text-white"
           target="_blank"
-          href="https://tomek-ch.medium.com/"
+          href="/resume.pdf"
         >
-          Medium
+          Resume
         </Link>
       </div>
     </div>
