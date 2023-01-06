@@ -1,6 +1,12 @@
 ---
 import { Hero } from "../components/Hero";
+import { LatestPosts } from "../components/LatestPosts";
 import Layout from "../layouts/Layout.astro";
+import { sortPosts } from "../utils/sortPosts";
+import type { Post } from "../utils/types";
+
+const allPosts = await Astro.glob<Post>("./blog/*.{md,mdx}");
+const latestPosts = sortPosts(allPosts).slice(0, 3);
 ---
 
 <Layout
@@ -8,4 +14,5 @@ import Layout from "../layouts/Layout.astro";
   description="I'm passionate about creating great software - anything from intuitive user interfaces and useful APIs to neat utilities that get things done."
 >
   <Hero />
+  <LatestPosts posts={latestPosts} />
 </Layout>
