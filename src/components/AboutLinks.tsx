@@ -23,7 +23,7 @@ export const AboutLinks = () => {
         GitHub
       </Link>
       <Link
-        href="/resume.pdf"
+        href="/Tomasz Chmielnicki CV.pdf"
         target="_blank"
         className={linkStyles}
         icon={<Person className="w-5 sm:w-6" />}

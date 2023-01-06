@@ -32,7 +32,7 @@ export const Hero = () => {
         <Link
           className="dark:hover:!text-white"
           target="_blank"
-          href="/resume.pdf"
+          href="/Tomasz Chmielnicki CV.pdf"
         >
           Resume
         </Link>
