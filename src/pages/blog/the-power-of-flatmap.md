@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 title: "The power of flatMap"
 description: "Have you ever used it?"
 pubDate: "Dec 16 2022"

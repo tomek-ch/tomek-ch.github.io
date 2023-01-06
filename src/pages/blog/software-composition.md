@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 title: "Breaking down problems and composing software"
 description: "Software development is all about problem solving."
 pubDate: "Dec 16 2022"
