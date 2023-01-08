@@ -1,6 +1,6 @@
 import type { Project } from "../utils/types";
 import { HeroLayout } from "./HeroLayout";
-import { ExternalLink } from "./icons/ExternalLink";
+import { ArrowRight } from "./icons/ArrowRight";
 import { Link } from "./Link";
 import { SecondaryHeading } from "./SecondaryHeading";
 
@@ -25,7 +25,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
               reverse={idx % 2 !== 0}
               links={
                 <Link
-                  icon={<ExternalLink width="16" />}
+                  iconRight={<ArrowRight className="w-5 h-5" width="16" />}
                   href={url}
                   className="mt-2"
                   variant="primary"

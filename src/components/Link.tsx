@@ -4,6 +4,7 @@ type LinkProps = {
   variant?: keyof typeof variants;
   linkSize?: keyof typeof sizes;
   icon?: ReactNode;
+  iconRight?: ReactNode;
 } & ({
   isActive?: boolean;
 } & HTMLProps<HTMLAnchorElement>);
@@ -34,6 +35,7 @@ export const Link = ({
   variant = "ghost",
   linkSize = "md",
   icon,
+  iconRight,
   ...props
 }: LinkProps) => {
   return (
@@ -42,11 +44,12 @@ export const Link = ({
       className={`transition-all active:scale-95 ${
         props.className || ""
       } ${variants[variant](isActive)} ${sizes[linkSize]} ${
-        icon ? "flex gap-2 items-center w-fit text-red!" : ""
+        icon || iconRight ? "flex gap-2 items-center w-fit text-red!" : ""
       }`}
     >
       {icon}
       {props.children}
+      {iconRight}
     </a>
   );
 };
