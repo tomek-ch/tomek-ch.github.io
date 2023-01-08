@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Separation of Concerns Is Not What You Think It Is"
-description: "Why do we keep doing this?"
+description: "A different perspective on separation of concerns and CSS"
 pubDate: "Dec 16 2022"
 tags:
   - "Frontend"
