@@ -6,6 +6,7 @@ description: "A tool for the players of the mobile game Clash Royale to help the
 heroImg: "/projects/royale-calculator/hero.png"
 githubLink: "https://github.com/tomek-ch/royale-calculator"
 liveLink: "https://royale-calculator.vercel.app"
+linkText: "Live"
 tech:
   - "TypeScript"
   - "React"

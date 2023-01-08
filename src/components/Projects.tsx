@@ -1,5 +1,7 @@
 import type { Project } from "../utils/types";
 import { HeroLayout } from "./HeroLayout";
+import { ExternalLink } from "./icons/ExternalLink";
+import { Link } from "./Link";
 import { SecondaryHeading } from "./SecondaryHeading";
 
 type ProjectsProps = {
@@ -21,6 +23,16 @@ export const Projects = ({ projects }: ProjectsProps) => {
               title={title}
               href={url}
               reverse={idx % 2 !== 0}
+              links={
+                <Link
+                  icon={<ExternalLink width="16" />}
+                  href={url}
+                  className="mt-2"
+                  variant="primary"
+                >
+                  Read more
+                </Link>
+              }
             />
           )
         )}

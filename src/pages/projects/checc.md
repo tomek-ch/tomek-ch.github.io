@@ -6,6 +6,7 @@ description: "A portable and extensible data validation library in JavaScript, p
 heroImg: "/projects/checc/hero.png"
 githubLink: "https://github.com/tomek-ch/checc.js"
 liveLink: "https://checcjs.gatsbyjs.io/"
+linkText: "Docs"
 tech:
   - "JavaScript"
   - "npm"

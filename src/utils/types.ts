@@ -19,6 +19,7 @@ export type ProjectMeta = {
   heroImg: string;
   githubLink: string;
   liveLink: string;
+  linkText: string;
   tech: string[];
   order: number;
 };

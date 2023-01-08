@@ -21,7 +21,7 @@ const variants = {
   tag: () =>
     `bg-slate-100 hover:bg-slate-200 hover:text-black
     dark:bg-slate-800 dark:hover:bg-slate-700 dark:hover:text-white`,
-  primary: () => "bg-blue-600 hover:bg-blue-700 text-white",
+  primary: () => "bg-blue-600 hover:bg-blue-700 text-white font-medium",
 };
 
 const sizes = {
