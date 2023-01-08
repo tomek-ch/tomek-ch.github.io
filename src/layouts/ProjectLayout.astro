@@ -1,0 +1,19 @@
+---
+import { HeroLayout } from "../components/HeroLayout";
+import { PostContent } from "../components/PostContent";
+import type { ProjectMeta } from "../utils/types";
+import Layout from "./Layout.astro";
+
+export type Props = { content: ProjectMeta & { url: string } };
+
+const {
+  content: { description, url, title, heroImg },
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <HeroLayout body={description} img={heroImg} title={title} href={url} />
+  <PostContent className="mx-auto py-20">
+    <slot />
+  </PostContent>
+</Layout>

@@ -1,3 +1,8 @@
+type Content<T> = {
+  url: string;
+  frontmatter: T;
+};
+
 export type PostMeta = {
   title: string;
   description: string;
@@ -6,7 +11,16 @@ export type PostMeta = {
   tags: string[];
 };
 
-export type Post = {
-  url: string;
-  frontmatter: PostMeta;
+export type Post = Content<PostMeta>;
+
+export type ProjectMeta = {
+  title: string;
+  description: string;
+  heroImg: string;
+  githubLink: string;
+  liveLink: string;
+  tech: string[];
+  order: number;
 };
+
+export type Project = Content<ProjectMeta>;
