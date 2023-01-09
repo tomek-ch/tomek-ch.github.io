@@ -35,7 +35,7 @@ export const HeroLayout = ({
       </div>
       <C href={href}>
         <img
-          className="rounded-xl border-2 border-slate-100 dark:border-slate-800 max-w-xl"
+          className="rounded-xl border-2 border-slate-100 dark:border-slate-800 max-w-full lg:max-w-xl"
           src={img}
           alt={title}
           width="676"
