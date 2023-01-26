@@ -18,6 +18,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
         {projects.map(
           ({ url, frontmatter: { title, description, heroImg } }, idx) => (
             <HeroLayout
+              key={url}
               body={description}
               img={heroImg}
               title={title}
