@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Breaking down problems and composing software"
 description: "Software development is all about problem solving."
-pubDate: "Dec 16 2022"
+pubDate: "Oct 12 2022"
 tags:
   - "Software development"
 ---
