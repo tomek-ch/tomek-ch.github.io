@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "JSX vs templates"
-description: "The difference is flexibility and code organization"
+description: "Two different solutions to one problem, each with its own tradeoffs."
 pubDate: "Jan 8 2023"
 tags:
   - "Frontend"

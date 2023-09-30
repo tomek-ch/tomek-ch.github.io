@@ -1,13 +1,13 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "The power of flatMap"
-description: "Have you ever used it?"
+description: "An underrated array method in the JS land."
 pubDate: "Dec 16 2022"
 tags:
-  - "JavaScript"
+  - "Software development"
 ---
 
-You're probably familiar with higher order array functions such as `map` and `filter`. But have you heard about `flatMap`?
+You're probably familiar with higher order array methods such as `map` and `filter`. But have you heard about `flatMap`?
 
 Map allows you to transform every item in an array to create a new array with exactly the same amount of items:
 

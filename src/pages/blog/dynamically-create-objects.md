@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Dynamically create objects in JavaScript"
-description: "Different ways to turn an array into an object"
+description: "Different ways to turn an array into an object."
 pubDate: "Jan 26 2023"
 tags:
   - "JavaScript"

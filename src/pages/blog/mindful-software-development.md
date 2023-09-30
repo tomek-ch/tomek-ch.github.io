@@ -4,7 +4,7 @@ title: "Mindful software development"
 description: "How my approach to programming changed as I progressed"
 pubDate: "Jan 27 2023"
 tags:
-  - "Software Development"
+  - "Software development"
 ---
 
 When I started learning programming, everything was new to me. I had to learn the syntax, understand the language, and practice problem solving.

@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Making apps dynamic vs making dynamic apps"
-description: "How JS frameworks reverse the flow of rendering in our apps"
+description: "How JS frameworks reverse the flow of rendering in our apps."
 pubDate: "Dec 16 2022"
 tags:
   - "Frontend"
