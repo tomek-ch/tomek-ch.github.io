@@ -1,44 +1,50 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: "Mindful Software Development"
-description: "How our approach to programming changes as we progress"
+description: "How my approach to programming changed as I progressed"
 pubDate: "Jan 27 2023"
 tags:
   - "Software Development"
 ---
 
-When we start learning programming, everything is new. We have to learn the syntax, understand the language of our choice, and practice problem solving.
+When I started learning programming, everything was new to me. I had to learn the syntax, understand the language, and practice problem solving.
 
-We're not focused on writing the most efficient solution, or architecting a maintainable system. Our goal is simply to get the thing to work.
+I wasn't focused on writing the most efficient solution, or architecting a maintainable system. My goal was simply to get the thing to work.
 
-Instead of thinking about reusability, encapsulation and other such principles, we're trying to figure out why the code isn't working, and how to fix it.
+Instead of thinking about reusability, encapsulation and other such principles, I was just trying to figure out why the code isn't working, and how to fix it.
 
-To fix our program, we need to test the assumptions we make about it. Is every variable what we expect it to be? Did we actually call the function?
+To fix my program, I needed to test the assumptions I made about it. Is every variable what I expect it to be? Did I actually call the function?
 
-We need to trace the logic of our code to understand what went wrong and figure out how to fix it.
+I needed to trace the logic of my code to understand what went wrong and figure out how to fix it.
 
-As we gain more experience, we understand the code we write more. We become better at quickly spotting and fixing bugs. Because of this, we can focus more on creating maintainable code instead of just trying to get a working solution. As a result, it becomes even easier for us to fix errors in our programs.
+As I gained more experience, I understand the code I wrote more. I become better at quickly spotting and fixing bugs.
 
-Then we get assigned to a legacy codebase, developed over the years by many people with different levels of experience, using now outdated technologies, employing questionable practices.
+Because of this, I was able to focus more on writing maintainable code instead of just trying to get a working solution. As a result, it became even easier for me to fix errors in my programs.
 
-We get to work on our first, seemingly simple task. We write the solution, but it doesn't work. Why doesn't it work? It should work.
+Then I got my first job.
 
-After some debugging, we find out that it's because another part of the system was interfering with what we wrote. We look at that code thinking "who in the world would write this?".
+I was assigned to a legacy codebase, developed over the years by many people with different levels of experience, using now outdated technologies, employing some questionable practices.
 
-We quickly realise that the codebase is a global mess of spaghetti code and getting anything done will be difficult. Instead of developing the system, we spend our time wrestling with its complexity, getting angry, and demotivated.
+I got to work on my first, seemingly simple task. I wrote the solution, but it didn't work. Why doesn't it work? It should work.
 
-We're constantly frustrated when working on the project, and rightfully so. So what should we do?
+After some debugging, I found out that it was because another part of the system was interfering with the code I wrote. I looked at that code thinking "who in the world would write this?".
 
-While rewriting the entire thing from scratch using new tech, and sticking to good practices would probably improve the situation, it's not an option, because of how much time it would take.
+I quickly realised that the codebase was a global mess of spaghetti code and getting anything done will be difficult. Instead of developing the system, I spent my time wrestling with its complexity, getting angry, and demotivated.
 
-We could switch to a different project, but we're thinking "I'm not a quitter, I can do this". So how should we approach working with a codebase like that?
+I was constantly frustrated when working on the project. What should I do?
 
-We need to go back to where we started. Instead of becoming frustrated because our code isn't working as expected, we need to diligently test our assumptions about it. That's how we find out why the program is broken, and how to fix it.
+While rewriting the entire thing from scratch using new tech, and sticking to good practices would probably be fun, it's not an option, because of how much time it would take.
 
-Instead of feeling resentful because of the bad practices in the codebase, we need to accept it for what it is. We need to let go of our emotions, be objective, and focus on the present. We need to be mindful.
+I could switch to a different project, but I was thinking "I'm not a quitter, I can do this". So how should I approach working with a codebase like that?
 
-Everything in our programs happens for a reason, and our job is to find that reason.
+I need to go back to where I started. Instead of becoming frustrated because my code isn't working as expected, I need to diligently test my assumptions about it. That's how I find out why the program is broken, and how to fix it.
+
+Instead of feeling resentful because of the bad practices in the codebase, I need to accept it for what it is. I need to let go of my emotions, be objective, and focus on the present. I need to be mindful.
+
+Everything in our programs happens for a reason, and my job is to find that reason.
 
 It's a tedious, time-consuming, and exhausting process.
 
-After all the hard work, when we finally manage to find and fix the bug, we might feel a spark of joy. The same joy that we felt when we were learning to code. Getting lost and figuring out our way to the solution. Testing every assumption, closely following the logic of our code. Feeling like a beginner again.
+However, after all the hard work, when I finally manage to find and fix the bug, I feel a spark of joy. The same joy that I felt when I was learning to code.
+
+Getting lost and figuring out my way to the solution. Feeling like a beginner again.
