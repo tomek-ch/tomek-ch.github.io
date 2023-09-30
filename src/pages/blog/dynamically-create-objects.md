@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: "Dynamically Create Objects in JavaScript"
+title: "Dynamically create objects in JavaScript"
 description: "Different ways to turn an array into an object"
 pubDate: "Jan 26 2023"
 tags:
@@ -84,7 +84,5 @@ const users = [
   { id: 42, name: "Bob" },
 ];
 
-const usersObj = Object.fromEntries(
-  users.map((user) => [user.id, user])
-);
+const usersObj = Object.fromEntries(users.map((user) => [user.id, user]));
 ```

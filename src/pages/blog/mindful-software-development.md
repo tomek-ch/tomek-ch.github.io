@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: "Mindful Software Development"
+title: "Mindful software development"
 description: "How my approach to programming changed as I progressed"
 pubDate: "Jan 27 2023"
 tags:

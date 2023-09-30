@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: "Smart Variants in TypeScript"
+title: "Smart variants in TypeScript"
 description: "How to write DRY code with TypeScript union types"
 pubDate: "Jan 26 2023"
 tags:
