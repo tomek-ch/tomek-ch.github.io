@@ -2,7 +2,7 @@
 order: 1
 layout: "../../layouts/ProjectLayout.astro"
 title: "Mealso"
-description: "Mobile app to simplify meal planning and grocery shopping. I'm planning to release it in 2023."
+description: "Mobile app to simplify meal planning and grocery shopping. Work in progress."
 heroImg: "/projects/mealso/hero.png"
 githubLink: "https://github.com/tomek-ch/mealso-website"
 liveLink: "https://mealso-website.vercel.app"
