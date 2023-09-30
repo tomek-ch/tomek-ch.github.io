@@ -100,3 +100,50 @@ sum = addOne 2
 ```
 
 We don't need to change the function declaration or invocation to use partial application in Elm, whereas in a language like Python, it would be a significant change.
+
+## Single argument functions and pipes
+
+Let's take a look at a more complex example of Elm code:
+
+```elm
+import List exposing (sum, filter, range)
+import Arithmetic exposing (isEven)
+
+sumEvenFromRange : Int -> Int -> Int
+sumEvenFromRange start end =
+  sum(filter isEven (range start end))
+```
+
+This function sums all the even numbers from `start` to `end`.
+
+The issue with this code is that the order of the operations is from righ to left, and there's some nesting, which makes the code difficult to follow.
+
+We could break it up with temporary variables to improve readability, but there's another way:
+
+```elm
+sumEvenFromRange : Int -> Int -> Int
+sumEvenFromRange start end =
+  range start end
+  |> filter isEven
+  |> sum
+```
+
+We use the pipe operator to pass the value returned from one function as the argument to the next one.
+
+This allows us to read the code from left to right, top to bottom, and removes nesting, without filling our code with poorly named temporary variables.
+
+The nice thing about only ever having single argument functions is that pipes become really simple. We just pass them a function.
+
+So, `filter isEven` evaluates to a function that accepts a list as an argument, which it receives from the pipe.
+
+Compare it to Hack pipes:
+
+```
+$x = vec[2,1,3]
+  |> Vec\map($$, $a ==> $a * $a)
+  |> Vec\sort($$);
+```
+
+The right-hand expression must contain at least one occurrence of `$$`. This token evaluates to the value passed by the pipe.
+
+This is necessary, because some functions (like `map` in this example), take more than one argument, but pipe can only pass a single value. We need to tell the pipe where to put that value.
