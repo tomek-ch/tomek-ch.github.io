@@ -82,4 +82,4 @@ Let's go back to the question I asked earlier - why should we use templates? Wha
 
 Again, I think the answer comes down to a feeling of organization that templates provide. We have a very specific way to do everything from conditional rendering to slots, which can make the code easier to read for many developers.
 
-Ultimately, both approaches are just as viable. I think there's no right or wrong choice. It's a matter of personal preference.
+Ultimately, both approaches are just as viable. I think there's no right or wrong choice. It's a matter of personal preference and I think you can tell what _my_ preference is.
