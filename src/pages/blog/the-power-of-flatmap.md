@@ -58,7 +58,7 @@ Just like we can recreate `map`, `filter` and `flat` with `reduce`, we can recre
 
 But, you know…
 
-!(reduce() is a very helpful function because it accomplishes two important tasks at once: writing unreadable code and showing off how smart you are)[/reduce-is-useful.png]
+![reduce() is a very helpful function because it accomplishes two important tasks at once: writing unreadable code and showing off how smart you are](/reduce-is-useful.png)
 
 And probably the most obvious solution is an imperative one:
 
