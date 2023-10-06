@@ -11,7 +11,7 @@ Software development is all about problem solving. Problem solving is all about 
 
 To break down a problem, we first need to analyze it. We need to identify the desired result and the means necessary to achieve it. Then we need to provide those means, and to do so, we perform the same analysis. We think of what we want, then we think of what we need to get it until we get to a problem that's easy enough to solve.
 
-To apply this process to software development, we need to think at a higher level first. Instead of beginning with small utility functions, we need to outline an API that we're later going to implement.
+To apply this process to software development, we need to think at a higher level first. Instead of beginning with small utility functions, we need to outline an interface that we're later going to implement.
 
 Let's imagine we're implementing checkers. We want to allow the players to make moves, so we need to know what move each piece of a player can make. We first need a list of a player's pieces. This means that we need to know whose turn it is and what is the state of the board.
 
@@ -59,4 +59,4 @@ Using pure functions also makes our code easy to test. All we need to verify is 
 
 As you can see, by applying the principles of problem solving, we can not only make software development easier but also write more maintainable, less error prone programs.
 
-We first analyze the given problem, starting from the top, outlining the general API, then we implement the it by writing small, independent functions. This allows us to create a coherent system instead of trying to figure out how to write a program from the ground up. By doing this, we can also avoid writing code that solves the wrong problems early on.
+We first analyze the given problem, starting from the top, outlining the general interface, then we implement it by writing small, independent functions. This allows us to create a coherent system instead of trying to figure out how to write a program from the ground up. By doing this, we can also avoid writing code that solves the wrong problems early on.
