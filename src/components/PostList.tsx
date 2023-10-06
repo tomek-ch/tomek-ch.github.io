@@ -1,6 +1,6 @@
 import { useSearchQuery } from "../store/postsFilter";
 import type { Post } from "../utils/types";
-import { PostExcerpt } from "./PostExcerpt";
+import { BlogCard } from "./BlogCard";
 
 type PostListProps = {
   posts: Post[];
@@ -20,9 +20,9 @@ export const PostList = ({ posts, className = "" }: PostListProps) => {
   }
 
   return (
-    <div className={`flex flex-col gap-12 sm:gap-14 ${className}`}>
-      {filtered.map(({ frontmatter, url }) => (
-        <PostExcerpt key={url} url={url} post={frontmatter} />
+    <div className={`flex flex-col gap-4 lg:gap-8 w-full ${className}`}>
+      {filtered.map(({ frontmatter: { minutesRead, title }, url }) => (
+        <BlogCard key={url} readTime={minutesRead} title={title} url={url} />
       ))}
     </div>
   );
