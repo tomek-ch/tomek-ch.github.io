@@ -74,7 +74,7 @@ What's a better solution? We can use a slot instead of a prop. The difficulty of
 
 Another problem is that because slots and props are two different things, they have different APIs. It would be a breaking change for the component to change a prop to a slot. We would need to fix it in every place where it was used. The solution here might be to support both, a prop and a slot.
 
-What about JSX? We don't really need to change anything. If the component renders `<th>{title}</th>`, we can simply write `title={<Checkbox />}` and it will work. If we use TypeScript and React, we only need to change the type of the prop from `string` to `ReactNode`. That's it. Because a string is a ReactNode too, no breaking change is introduced.
+What about JSX? We don't really need to change anything. If the component renders `<th>{title}</th>`, we can simply write `title={<Checkbox />}` and it will work. If we use TypeScript and React, we only need to change the type of the prop from `string` to `ReactNode`. That's it. Because a string is a `ReactNode` too, no breaking change is introduced.
 
 ## Conclusion
 
