@@ -60,7 +60,7 @@ Speaking of higher-order functions, this is how we implement scoped slots using 
 
 > You can think of a scoped slot as a function being passed into the child component. The child component then calls it, passing props as arguments
 
-Another funny thing is that [Vue actually supports JSX](https://vuejs.org/guide/components/slots.html#scoped-slots). My question is, why even use templates in the first place?
+Another funny thing is that [Vue actually supports JSX](https://vuejs.org/guide/extras/render-function.html). My question is, why even use templates in the first place?
 
 ## Different APIs for props and slots
 
