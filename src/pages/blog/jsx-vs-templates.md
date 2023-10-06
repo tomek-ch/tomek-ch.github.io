@@ -62,6 +62,8 @@ Speaking of higher-order functions, this is how we implement scoped slots using 
 
 Another funny thing is that [Vue actually supports JSX](https://vuejs.org/guide/extras/render-function.html). My question is, why even use templates in the first place?
 
+Seems like the authors of Vue.js themselves prefer functional components, because that's what they used to write [Vue's `Transition`](https://github.com/vuejs/core/blob/main/packages/runtime-dom/src/components/Transition.ts).
+
 ## Different APIs for props and slots
 
 Let's take a look at one more example. Imagine that we're using a template based framework and have a reusable component in our app that accepts a `title` prop. Now imagine that due to a new feature being implemented, we need to render a checkbox instead of text for the title somewhere in our app. Maybe we need to put the checkbox in a table header to implement a "select all rows" functionality.
