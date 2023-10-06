@@ -9,10 +9,12 @@ import AsideLayout from "./AsideLayout.astro";
 
 export type Props = {
   content: PostMeta & { url: string };
+  url: string;
 };
 
 const {
-  content: { url, title, description, pubDate, minutesRead, tags },
+  content: { title, description, pubDate, minutesRead, tags },
+  url,
 } = Astro.props;
 
 const latestPosts = sortPosts(await Astro.glob("../pages/blog/*.{md,mdx}"))
