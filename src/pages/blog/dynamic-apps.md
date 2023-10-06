@@ -42,7 +42,7 @@ This is problematic because the HTML is not aware of the script. Adding dynamic 
 
 ## Reversing the flow of rendering
 
-JavaScript frameworks fix the above problem by allowing the developer to render all of the HTML with JS, be it using JSX or templates. Here is the menu example written using React:
+JavaScript frameworks fix the above problem by allowing the developer to render all of the HTML using JS, be it using JSX or templates. Here is the menu example written using React:
 
 ```jsx
 const useToggle = () => {
