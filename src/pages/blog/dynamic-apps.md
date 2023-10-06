@@ -42,7 +42,7 @@ This is problematic because the HTML is not aware of the script. Adding dynamic 
 
 ## Reversing the flow of rendering
 
-JavaScript frameworks fix the above problem by allowing the developer to render all of the HTML using JS, be it using JSX or templates. Here is the menu example written using React:
+JavaScript frameworks fix the above problem by allowing the developer to render all of the HTML with JS, be it using JSX or templates. Here is the menu example written using React:
 
 ```jsx
 const useToggle = () => {
@@ -72,6 +72,6 @@ The flow of rendering here goes something like this:
 
 ![React is rendering the markup augmented with dynamic functionality](/react-rendering-flow.png)
 
-This removes the burden of having to select elements on the page to do stuff with them because we already have the event listeners and state variables available to us when when rendering the markup.
+This removes the burden of having to select elements on the page to do stuff with them because we already have the event listeners and state variables available to us when rendering the markup.
 
-Now you might be thinking, what if we rendered our HTML with vanilla JS? It's possible but we would still need to select DOM nodes after the initial rendering to update them. We'd end up with a mix of declarative and imperative code. If we wanted to make the rendering code the single source of truth for our markup, we would need to come up with a way to replace the elements when the state changes, or create a comiler to write the DOM updating code for us. At this point we're building our own inefficient JavaScript framework.
+Now you might be thinking, what if we rendered our HTML with vanilla JS? It's possible but we would still need to select DOM nodes after the initial rendering to update them. We'd end up with a mix of declarative and imperative code. If we wanted to make the rendering code the single source of truth for our markup, we would need to come up with a way to replace the elements when the state changes, or create a compiler to write the DOM updating code for us. At this point we're building our own inefficient JavaScript framework.
