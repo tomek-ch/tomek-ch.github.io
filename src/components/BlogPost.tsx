@@ -6,7 +6,7 @@ type BlogPostProps = {
   children: ReactNode;
   title: string;
   pubDate: string;
-  minutesRead: number;
+  minutesRead: string;
   tags: string[];
 };
 

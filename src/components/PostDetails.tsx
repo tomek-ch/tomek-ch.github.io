@@ -1,5 +1,5 @@
 type PostDetailsProps = {
-  minutesRead: number;
+  minutesRead: string;
   pubDate: string;
   className?: string;
 };

@@ -5,7 +5,7 @@ import { Tags } from "./Tags";
 type PostTopProps = {
   title: string;
   pubDate: string;
-  minutesRead: number;
+  minutesRead: string;
   tags: string[];
 };
 

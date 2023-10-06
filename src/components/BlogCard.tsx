@@ -1,6 +1,6 @@
 type BlogCardProps = {
   title: string;
-  readTime: number;
+  readTime: string;
   url: string;
 };
 

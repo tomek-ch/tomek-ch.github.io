@@ -7,7 +7,7 @@ export type PostMeta = {
   title: string;
   description: string;
   pubDate: string;
-  minutesRead: number;
+  minutesRead: string;
   tags: string[];
 };
 
